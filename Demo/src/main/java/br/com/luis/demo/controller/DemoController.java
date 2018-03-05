@@ -26,5 +26,10 @@ public class DemoController {
 	public @ResponseBody Iterable<Vowel> findAll() {
 		return demoService.findAll();
 	}
+	
+	@GetMapping(path="/healthCheck")
+	public @ResponseBody String healthCheck() {
+		return "OK";
+	}
 
 }

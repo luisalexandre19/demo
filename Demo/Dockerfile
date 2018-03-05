@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
 MAINTAINER Luis Alexandre <luisalexandre19@gmail.com>
+RUN apk add --no-cache curl
 VOLUME /tmp
 EXPOSE 8080
 ADD /target/Demo-1.0.0.jar demo.jar

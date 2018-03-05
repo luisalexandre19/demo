@@ -53,8 +53,14 @@ Configurando o shell da myvm1: $ eval $(docker-machine env myvm1)
 Realizando o deploy: $ docker stack deploy --compose-file docker-stack.yml demoStack
 
 Testando a aplicação em cluster (node myvw1): curl http://192.168.99.102:8080/demo/healthcheck
+
 Testando a aplicação em cluster (node myvw2): curl http://192.168.99.103:8080/demo/healthcheck
+
 Processando uma stream em cluster (node myvw1): curl http://192.168.99.102:8080/demo/process/aAbBABacafe
+
 Processando uma stream em cluster (node myvw2): curl http://192.168.99.103:8080/demo/process/aAbBABacafe
+
 Obtendo os processamentos realizados em cluster (node myvw1): curl http://192.168.99.102:8080/demo/findAll
+
 Obtendo os processamentos realizados em cluster (node myvw2): curl http://192.168.99.103:8080/demo/findAll
+

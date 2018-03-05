@@ -27,7 +27,8 @@ Executar o build do composer para gerar a imagem: $ docker-compose build
 Iniciando o swarm: $ docker swarm init
 
 Realizando o deploy: $ docker stack deploy --compose-file docker-stack.yml demoStack 
-(Aqui já permite escalonar o ambiente aumentando os números de réplicas determinada no arquivo docker-stack.yml)
+
+Até aqui já permite escalonar o ambiente aumentando os números de réplicas determinada no arquivo docker-stack.yml, mas o objetivo é implantar o projeto em um cluster utilizando o swarms, portanto, devemos executar os passos abaixo.
 
 Criando maquina virtual 1 para deploy em cluster: $ docker-machine create --driver virtualbox myvm1
 

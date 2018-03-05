@@ -8,6 +8,12 @@ import javax.persistence.Id;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Classe que armazena o resultado do processamento
+ * 
+ * @author luisalexandresilvasantos
+ *
+ */
 @Entity
 public class Vowel {
 

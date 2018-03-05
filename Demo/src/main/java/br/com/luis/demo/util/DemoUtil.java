@@ -1,22 +1,21 @@
 package br.com.luis.demo.util;
 
+/**
+ * Classe utlitária com metodos utilizaveis em todo projeto 
+ * 
+ * @author luisalexandresilvasantos
+ *
+ */
 public class DemoUtil {
 	
-	public static boolean isVowel(char c) {
+	/**
+	 * Verifica se o caracter é uma vogal
+	 * 
+	 * @param c
+	 * @return true caso seja vogal ou false caso contrário
+	 */
+	public static boolean isVowel(String c) {
 		return "AEIOU".indexOf(c) != -1;
 	}
 	
-	public static boolean containsStartByPosition(char[] array, char key, int startPosition) {
-		
-		for (int i = startPosition; i < array.length; i++) {
-
-			if (array[i] == key) {
-				return true;
-			}
-			
-		}
-		
-		return false;
-	}
-
 }

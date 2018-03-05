@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+ 
+ db:
+   image: mysql
+   ports:
+     - "3306:3306"
+   environment:
+     MYSQL_ROOT_PASSWORD: demo@secret
+     MYSQL_DATABASE: db_demo
+     MYSQL_USER: demo
+     MYSQL_PASSWORD: demo
+   deploy:
+     placement:
+       constraints: [node.role == manager]  
+
+ api:
+   image: demo_api
+   depends_on:
+     - db
+   ports:
+    - "8080:8080"
+   environment:
+     - DATABASE_HOST=db
+     - DATABASE_PORT=3306
+   healthcheck:
+     test: curl --fail -s http://localhost:8080/demo/healthCheck || exit 1
+     interval: 1m30s
+     timeout: 10s
+     retries: 3
+   deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure  
+ 

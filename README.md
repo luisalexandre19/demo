@@ -1,7 +1,7 @@
 # demo
 Projeto Demo
 
-Este arquivo demonstra o passo a passo para executar e executar o projeto Demo.
+Este arquivo demonstra o passo a passo para executar o projeto Demo.
 
 Utilizado no projeto:
 

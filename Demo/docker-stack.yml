@@ -11,9 +11,6 @@ services:
      MYSQL_DATABASE: db_demo
      MYSQL_USER: demo
      MYSQL_PASSWORD: demo
-   deploy:
-     placement:
-       constraints: [node.role == manager]  
 
  api:
    image: demo_api
